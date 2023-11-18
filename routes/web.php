@@ -18,9 +18,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-use App\Http\Controllers\UserController;
+// use App\Http\Controllers\UserController;
+// // Route::get('/hello', [UserController::class, 'sayHello']);
+// Route::get('/', [UserController::class, 'sayHello']);
 
-// Route::get('/hello', [UserController::class, 'sayHello']);
 
-Route::get('/', [UserController::class, 'sayHello']);
 
+use App\Http\Controllers\ProfileController;
+Route::get('/profile/{id}', [ProfileController::class, 'index']);
